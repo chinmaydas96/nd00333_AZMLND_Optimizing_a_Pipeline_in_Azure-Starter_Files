@@ -73,6 +73,7 @@ def main():
 
     accuracy = model.score(x_test, y_test)
     run.log("Accuracy", np.float(accuracy))
+    joblib.dump(value=model, filename="./outputs/best_hyperdrive_model.joblib")
 
 if __name__ == '__main__':
     main()
